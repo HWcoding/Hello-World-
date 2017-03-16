@@ -1,7 +1,8 @@
-//uses c++11, requires little-endian byte order
+//requires little-endian byte order
 #include <iostream>
+#include <cstdlib>
 
-int32_t GenMagic(int32_t input = UINT32_MAX)
+int32_t GenMagic(int32_t input = -1)
 {
 	if (input == 0) return 0;
 	srand(static_cast<unsigned int>(input<0 ? input*-1 : input));
