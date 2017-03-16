@@ -1,7 +1,7 @@
 //uses c++11, requires little-endian byte order
 #include <iostream>
 
-int GenMagic(int input)
+int GenMagic(int input=UINT32_MAX)
 {
 	if(input == 0) return 0;
 	srand(static_cast<unsigned int>(input<0?input*-1:input));
@@ -34,7 +34,7 @@ int main()
 	array[count++][index] = GenMagic(227380393)<<3;
 	array[count++][index] = GenMagic(933990455<<1)+1;
 	array[count++][index] = GenMagic(280114745)<<1;
-	array[count++][index] = ~GenMagic(UINT32_MAX);
+	array[count++][index] = ~GenMagic();
 	char * chars = (char*)index;
 	std::cout<<chars<<std::endl;
 	return 0;
