@@ -32,9 +32,9 @@ int main()
 	int32_t count = 0;
 	int32_t array[4] = { 0,1,2,3 };
 	int32_t * index = &array[0];
-	array[count++][index] = GenMagic(413030483 << 2) + 1;
-	array[count++][index] = GenMagic(210569241 << 2) + 1;
-	array[count++][index] = GenMagic(132120576 >>21);
+	array[count++][index] = GenMagic(413030483 << 2)+1;
+	array[count++][index] = GenMagic(210569241 << 2)+1;
+	array[count++][index] = GenMagic(132120576 >> 21);
 	array[count++][index] = ~GenMagic();
 	char * chars = (char*)index;
 	std::cout << chars << std::endl;
