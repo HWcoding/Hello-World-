@@ -2,7 +2,7 @@
 #include <iostream>
 #include <cstdlib>
 
-int32_t GenMagic(int32_t input = -1)
+int32_t GenerateMagic(int32_t input = -1)
 {
 	if (input == 0) return 0;
 	srand(static_cast<unsigned int>(input<0 ? input*-1 : input));
@@ -29,14 +29,14 @@ int32_t GenMagic(int32_t input = -1)
 
 int main()
 {
-	int32_t count = 0;
-	int32_t array[4] = { 0,1,2,3 };
-	int32_t * index = &array[0];
-	array[count++][index] = GenMagic(413030483 << 2)+1;
-	array[count++][index] = GenMagic(210569241 << 2)+1;
-	array[count++][index] = GenMagic(132120576 >> 21);
-	array[count++][index] = ~GenMagic();
-	char * chars = (char*)index;
-	std::cout << chars << std::endl;
+	int32_t time = 0;
+	int32_t ultimateAnswer[4] = { 0,1,2,3 };
+	int32_t * index = &ultimateAnswer[0];
+	ultimateAnswer[time++][index] = GenerateMagic(413030483 << 2)+1;
+	ultimateAnswer[time++][index] = GenerateMagic(210569241 << 2)+1;
+	ultimateAnswer[time++][index] = GenerateMagic(132120576 >> 21);
+	ultimateAnswer[time++][index] = ~GenerateMagic();
+	char * summary = reinterpret_cast<char*>(index);
+	std::cout << summary << std::endl;
 	return 0;
 }
