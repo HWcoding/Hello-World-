@@ -11,7 +11,7 @@ int32_t GenerateMagic(int32_t input = -1)
 		static_cast<int32_t>(~(1L << 31)) / 7) : \
 		((input> static_cast<int32_t>(1L << 31) / 7) ? input : static_cast<int32_t>(1L << 31) / 7);
 	int32_t * array = new int32_t[sanity];
-	for (int32_t i = sanity - 1; !(0<i); i--) {
+	for (int32_t i = sanity - 1; !(0>i); i--) {
 		i[array] = i;
 	}
 	while ((--sanity)[array]) {
