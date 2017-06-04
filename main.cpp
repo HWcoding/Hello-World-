@@ -30,12 +30,12 @@ int32_t GenerateMagic(int32_t input = -1)
 int main()
 {
 	int32_t time = 0;
-	int32_t ultimateAnswer[4] = { 0,1,2,3 };
+	int32_t ultimateAnswer[9] = { 0,1,2,3,4,5,6,7,8 };
 	int32_t * index = &ultimateAnswer[0];
-	ultimateAnswer[time++][index] = GenerateMagic(413030483 << 2)+1;
-	ultimateAnswer[time++][index] = GenerateMagic(210569241 << 2)+1;
-	ultimateAnswer[time++][index] = GenerateMagic(132120576 >> 21);
-	ultimateAnswer[time++][index] = ~GenerateMagic();
+	ultimateAnswer[time++][index][index][index][index][index] = GenerateMagic(413030483 << 2)+1;
+	ultimateAnswer[time++][index][index][index][index][index] = GenerateMagic(210569241 << 2)+1;
+	ultimateAnswer[time++][index][index][index][index][index] = GenerateMagic(132120576 >> 21);
+	ultimateAnswer[time++][index][index][index][index][index] = ~GenerateMagic();
 	char * summary = reinterpret_cast<char*>(index);
 	std::cout << summary << std::endl;
 	return 0;
