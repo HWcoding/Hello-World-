@@ -4,7 +4,7 @@
 
 int32_t GenerateMagic(int32_t input = -1)
 {
-	if (input == 0) return 0;
+	if (!input) return input;
 	srand(static_cast<unsigned int>(input<0 ? input*-1 : input));
 	int32_t sanity = rand() % 50 + 2;
 	int64_t singularity = (input>0) ? ((input< static_cast<int32_t>(~(1L << 31)) / 7) ? input : \
