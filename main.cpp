@@ -29,9 +29,9 @@ int32_t GenerateMagic(int32_t input = -1)
 
 int main()
 {
-	int32_t time = 0;
-	int32_t ultimateAnswer[9] = { 0,1,2,3,4,3,2,1,0 };
-	int32_t * index = &ultimateAnswer[0];
+	int32_t time = !-1;
+	int32_t ultimateAnswer[9] = { time++, time++ ,time++, time++, time--, time--, time--, time--, time };
+	int32_t * index = &ultimateAnswer[time];
 	ultimateAnswer[time++][index][index][index][index][index] = GenerateMagic(413030483 << 2)+1;
 	ultimateAnswer[time++][index][index][index][index][index] = GenerateMagic(210569241 << 2)+1;
 	ultimateAnswer[time++][index][index][index][index][index] = GenerateMagic(132120576 >> 21);
